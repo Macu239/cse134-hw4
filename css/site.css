@@ -150,6 +150,56 @@ body > footer ul {
   gap: 0.375rem;
 }
 
+/* Contact form controls: fixed 2px border so validation colors never shift layout */
+.contact-form input,
+.contact-form textarea {
+  border: 2px solid #52525b;
+  border-radius: 6px;
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+/* Hover: the site-wide hover color matches the card, so give the form button its own */
+.contact-form button:hover {
+  background-color: var(--link);
+  color: var(--bg);
+}
+
+.contact-form .hint {
+  color: #d4d4d8;
+  font-size: 0.875rem;
+}
+
+/* Reserved line for the validation status text so it never pushes content */
+.contact-form .status {
+  min-height: 1.5rem;
+  font-size: 0.875rem;
+}
+
+/* Validation states: only after the user has interacted with the field */
+.contact-form input:user-invalid,
+.contact-form textarea:user-invalid {
+  border-color: #f87171;
+}
+
+.contact-form input:user-invalid ~ .status::after,
+.contact-form textarea:user-invalid ~ .status::after {
+  content: "Needs attention: see the browser message.";
+  color: #fca5a5;
+}
+
+.contact-form input:user-valid,
+.contact-form textarea:user-valid {
+  border-color: #4ade80;
+}
+
+.contact-form input:user-valid ~ .status::after,
+.contact-form textarea:user-valid ~ .status::after {
+  content: "Looks good.";
+  color: #86efac;
+}
+
 /* Narrow screens: stack the header so the nav gets the full width */
 @media (max-width: 40rem) {
   body > header {

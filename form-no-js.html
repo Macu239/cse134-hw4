@@ -59,28 +59,35 @@
 
         <section aria-labelledby="form-heading">
           <h2 id="form-heading">Send a Message</h2>
-          <form action="https://httpbin.org/post" method="post">
+          <form action="https://httpbin.org/post" method="post" class="contact-form">
             <p id="form-instructions">
-              All three fields are required. Enter your name, an email address I can reply to,
-              and your message, then press Send Message.
+              Fields marked with an asterisk (*) are required. Enter your name, an email address
+              I can reply to, and your message, then press Send Message. Comments are capped at
+              800 characters to keep messages focused.
             </p>
             <fieldset>
               <legend>Your Information</legend>
               <p class="field">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required>
+                <label for="name">Name <span aria-hidden="true">*</span></label>
+                <span class="hint" id="name-hint">Between 1 and 100 characters.</span>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" minlength="1" maxlength="100" aria-describedby="name-hint" required>
+                <span class="status"></span>
               </p>
               <p class="field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" autocomplete="email" spellcheck="false" placeholder="you@email.com" required>
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <span class="hint" id="email-hint">A valid address, such as name@example.com.</span>
+                <input type="email" id="email" name="email" autocomplete="email" spellcheck="false" placeholder="you@email.com" aria-describedby="email-hint" required>
+                <span class="status"></span>
               </p>
             </fieldset>
 
             <fieldset>
               <legend>Message</legend>
               <p class="field">
-                <label for="comments">Comments</label>
-                <textarea id="comments" name="comments" rows="6" placeholder="Tell me about your project..." required></textarea>
+                <label for="comments">Comments <span aria-hidden="true">*</span></label>
+                <span class="hint" id="comments-hint">Between 10 and 800 characters.</span>
+                <textarea id="comments" name="comments" rows="6" placeholder="Tell me about your project..." minlength="10" maxlength="800" aria-describedby="comments-hint" required></textarea>
+                <span class="status"></span>
               </p>
             </fieldset>
 
