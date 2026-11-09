@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Projects by Jeremy Shih, including Travel Splitter, AI Resume Tailor, and Codekata.">
+    <title>Jeremy Shih | Projects</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/grid-layout.css">
+    <link rel="stylesheet" href="css/site.css">
+  </head>
+  <body>
+    <a href="#main">Skip to main content</a>
+
+    <header>
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" fill="#000000"/>
+        <text x="20" y="28" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="none" stroke="#ffffff" stroke-width="1.5">JS</text>
+      </svg>
+      <p><a href="index.html">Jeremy Shih</a></p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="project.html" aria-current="page">Projects</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="experiments.html">Experiments</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <h1>Projects</h1>
+      <p>Things I've built through coursework, personal builds, and group projects.</p>
+
+      <grid-layout>
+        <article>
+          <h2>Travel Splitter</h2>
+          <p><time datetime="2026-03">Mar 2026</time> to present</p>
+          <ul>
+            <li>Built a full-stack expense-splitting app for group trips with real-time cost tracking and settlement calculation.</li>
+            <li>Implemented <strong>debt optimization</strong> logic to minimize who-owes-whom transactions.</li>
+            <li>Deployed a responsive React/Next.js UI with REST APIs and persistent storage via GitHub and Render/Vercel.</li>
+          </ul>
+          <h3>Stack</h3>
+          <ul>
+            <li>Next.js</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>MongoDB</li>
+          </ul>
+          <p><a href="https://github.com/Macu239/TravelSplitter">View on GitHub</a></p>
+        </article>
+
+        <article>
+          <h2>AI Resume Tailor</h2>
+          <p><time datetime="2026-06">Jun 2026</time> to present</p>
+          <ul>
+            <li>Built a full-stack Next.js app that tailors resumes and cover letters using the Groq LLM API.</li>
+            <li>Designed a modular AI service layer so LLM providers can be swapped with minimal code changes.</li>
+            <li>Added Upstash Redis rate limiting to protect API endpoints from abuse.</li>
+          </ul>
+          <h3>Stack</h3>
+          <ul>
+            <li>TypeScript</li>
+            <li>Next.js</li>
+            <li>React</li>
+            <li>Groq (LLM)</li>
+            <li>Upstash Redis</li>
+          </ul>
+          <p><a href="https://github.com/Macu239/AI-Resume-Tailor">View on GitHub</a></p>
+        </article>
+
+        <article>
+          <h2>Codekata: Code Typing Game</h2>
+          <p><time datetime="2026-03">Mar 2026</time> to <time datetime="2026-06">Jun 2026</time></p>
+          <ul>
+            <li>Built a configurable countdown-timer feature end-to-end, from game-engine logic to win/lose end screens.</li>
+            <li>Collaborated in an 8+ person team using Conventional Commits and PR review.</li>
+            <li>Wrote Playwright end-to-end tests for the settings panel and countdown controls.</li>
+          </ul>
+          <h3>Stack</h3>
+          <ul>
+            <li>JavaScript</li>
+            <li>HTML/CSS</li>
+            <li>Jasmine</li>
+            <li>Playwright</li>
+          </ul>
+          <p><a href="https://github.com/cse110-sp26-group23/cse110-sp26-group23">View on GitHub</a></p>
+        </article>
+
+        <article>
+          <h2>Resonance: Full Stack Social Platform</h2>
+          <p>In progress</p>
+          <ul>
+            <li>Building a MERN stack social platform for music discovery and microblog-style interaction.</li>
+            <li>Designed scalable APIs, authentication, and a modular Express.js backend.</li>
+            <li>Focused on system design and deployment.</li>
+          </ul>
+          <h3>Stack</h3>
+          <ul>
+            <li>React</li>
+            <li>MongoDB</li>
+            <li>Node.js</li>
+            <li>Express</li>
+          </ul>
+          <p><a href="https://github.com/Macu239/Resonance">View on GitHub</a></p>
+        </article>
+
+        <article>
+          <h2>Study Abroad Guide</h2>
+          <p>Informational resource</p>
+          <ul>
+            <li>An unofficial resource website for students who want to study abroad in Taiwan.</li>
+            <li>Guides on application processes, university reviews, and cultural tips.</li>
+          </ul>
+          <h3>Stack</h3>
+          <ul>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+          <p><a href="https://github.com/Macu239/StudyAbroadGuide">View on GitHub</a></p>
+        </article>
+
+        <article>
+          <h2>2048 Game</h2>
+          <p><time datetime="2024-06">Jun 2024</time> to <time datetime="2024-12">Dec 2024</time></p>
+          <ul>
+            <li>Implemented a terminal version of the 2048 puzzle game using an encapsulated class for board state, scoring, and moves.</li>
+            <li>Used a single-pass, <i>two-pointer</i> compaction algorithm that prevents double-merges within a move.</li>
+            <li>Added WASD controls and loss detection that scans for open cells and adjacent equal tiles.</li>
+          </ul>
+          <h3>Stack</h3>
+          <ul>
+            <li>C++</li>
+          </ul>
+          <p><a href="https://github.com/Macu239/2048-Game">View on GitHub</a></p>
+        </article>
+      </grid-layout>
+    </main>
+
+    <footer>
+      <ul>
+        <li><a href="https://github.com/Macu239">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jeremy-shih-ucsd/">LinkedIn</a></li>
+        <li><a href="mailto:jes063@ucsd.edu">Email</a></li>
+        <li><a href="tel:+16616258403">(661) 625-8403</a></li>
+      </ul>
+      <p><small>&copy; 2026 Jeremy Shih. All Rights Reserved.</small></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Jeremy Shih, a Computer Science student at UC San Diego building full-stack web applications.">
+    <meta name="author" content="Jeremy Shih">
+    <title>Jeremy Shih | Home</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/grid-layout.css">
+    <link rel="stylesheet" href="css/site.css">
+    <script src="js/hello-world.js" defer></script>
+  </head>
+  <body>
+    <a href="#main">Skip to main content</a>
+
+    <header>
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" fill="#000000"/>
+        <text x="20" y="28" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="none" stroke="#ffffff" stroke-width="1.5">JS</text>
+      </svg>
+      <p><a href="index.html">Jeremy Shih</a></p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="experiments.html">Experiments</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <grid-layout class="with-sidebar">
+        <aside>
+          <nav aria-labelledby="sections-heading">
+            <h2 id="sections-heading">Sections</h2>
+            <ol>
+              <li><a href="#about">About</a></li>
+              <li><a href="project.html">Projects</a></li>
+              <li><a href="skills.html">Skills</a></li>
+              <li><a href="experience.html">Experience</a></li>
+              <li><a href="resume.html">Resume</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ol>
+          </nav>
+        </aside>
+
+        <div>
+          <p>CS student @ UCSD</p>
+          <h1>Hi, I'm Jeremy Shih</h1>
+          <picture>
+            <source srcset="images/me.webp" type="image/webp">
+            <img src="images/me.jpg" alt="Jeremy Shih sitting on a bench beside a city street" width="480" height="360">
+          </picture>
+          <p>Status: <b>Open to opportunities</b></p>
+          <h2>Still <em>learning</em>, always building.</h2>
+          <p>
+            I'm driven by <strong>curiosity</strong> and the process of building: learning quickly,
+            adapting to new challenges, and working with others to turn ideas into real products.
+          </p>
+          <p>
+            <a href="project.html">View Projects</a>
+            <a href="resume.html">View Resume</a>
+          </p>
+
+          <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <h3>Where math, code, and curiosity meet.</h3>
+            <p>
+              I am a <b>Computer Science</b> student at <strong>UC San Diego</strong> with hands-on experience
+              building full-stack web applications using React, Node.js, and MongoDB. I'm interested in
+              scalable systems, real-time applications, and cloud infrastructure. I'm an active
+              <abbr title="Association for Computing Machinery">ACM</abbr> member and a collaborative team
+              contributor with strong bilingual communication skills in English and Mandarin (<i lang="zh-Hant">中文</i>).
+            </p>
+            <blockquote>
+              <p>Driven by curiosity and the process of building: learning quickly, adapting to new challenges.</p>
+            </blockquote>
+            <dl>
+              <dt>Based in</dt>
+              <dd>San Diego / Taiwan</dd>
+              <dt>Studying</dt>
+              <dd>B.S. Computer Science @ UC San Diego, expected June 2027</dd>
+              <dt>Motivated by</dt>
+              <dd>Solving complex problems and building impactful applications</dd>
+              <dt>Currently exploring</dt>
+              <dd>AI, LLMs, and full-stack systems</dd>
+            </dl>
+          </section>
+        </div>
+      </grid-layout>
+
+      <hello-world></hello-world>
+      <noscript>
+        <p>JavaScript is disabled. The site works fully without it; only the hello-world console greeting is skipped.</p>
+      </noscript>
+    </main>
+
+    <footer>
+      <ul>
+        <li><a href="https://github.com/Macu239">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jeremy-shih-ucsd/">LinkedIn</a></li>
+        <li><a href="mailto:jes063@ucsd.edu">Email</a></li>
+        <li><a href="tel:+16616258403">(661) 625-8403</a></li>
+      </ul>
+      <p><small>&copy; 2026 Jeremy Shih. All Rights Reserved.</small></p>
+    </footer>
+  </body>
+</html>

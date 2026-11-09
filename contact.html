@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact Jeremy Shih by phone, email, or the message form.">
+    <title>Jeremy Shih | Contact</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/grid-layout.css">
+    <link rel="stylesheet" href="css/site.css">
+  </head>
+  <body>
+    <a href="#main">Skip to main content</a>
+
+    <header>
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" fill="#000000"/>
+        <text x="20" y="28" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="none" stroke="#ffffff" stroke-width="1.5">JS</text>
+      </svg>
+      <p><a href="index.html">Jeremy Shih</a></p>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="experiments.html">Experiments</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <h1>Contact</h1>
+
+      <grid-layout class="split">
+        <section aria-labelledby="connect-heading">
+          <h2 id="connect-heading">Let's Connect</h2>
+          <p>
+            Whether you have a project in mind, a question, or just want to say hello, my inbox is always open.
+            I'll get back to you within a day or two.
+          </p>
+          <address>
+            Phone: <a href="tel:+16616258403">(661) 625-8403</a>
+            <br>
+            Email: <a href="mailto:jes063@ucsd.edu">jes063@ucsd.edu</a>
+            <br>
+            GitHub: <a href="https://github.com/Macu239">github.com/Macu239</a>
+            <br>
+            LinkedIn: <a href="https://www.linkedin.com/in/jeremy-shih-ucsd/">linkedin.com/in/jeremy-shih-ucsd</a>
+          </address>
+        </section>
+
+        <section aria-labelledby="form-heading">
+          <h2 id="form-heading">Send a Message</h2>
+          <form action="https://formspree.io/f/mlgowele" method="post">
+            <fieldset>
+              <legend>Your Information</legend>
+              <p>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required>
+              </p>
+              <p>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" spellcheck="false" placeholder="you@email.com" required>
+              </p>
+            </fieldset>
+
+            <fieldset>
+              <legend>Preferred Contact Method</legend>
+              <p>
+                <input type="radio" id="prefer-email" name="preferred" value="email" checked>
+                <label for="prefer-email">Email</label>
+                <input type="radio" id="prefer-phone" name="preferred" value="phone">
+                <label for="prefer-phone">Phone</label>
+              </p>
+            </fieldset>
+
+            <fieldset>
+              <legend>Message</legend>
+              <p>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What's on your mind?">
+              </p>
+              <p>
+                <label for="message">Message</label>
+                <br>
+                <textarea id="message" name="message" rows="6" cols="40" placeholder="Tell me about your project..." required></textarea>
+              </p>
+            </fieldset>
+
+            <p>
+              <button type="submit">Send Message</button>
+              <button type="reset">Clear Form</button>
+            </p>
+          </form>
+        </section>
+      </grid-layout>
+
+      <dialog aria-labelledby="dialog-heading">
+        <h2 id="dialog-heading">Message Sent</h2>
+        <p>Thanks for your message. I'll get back to you within a day or two.</p>
+        <form method="dialog">
+          <button type="submit">Close</button>
+        </form>
+      </dialog>
+    </main>
+
+    <footer>
+      <ul>
+        <li><a href="https://github.com/Macu239">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jeremy-shih-ucsd/">LinkedIn</a></li>
+        <li><a href="mailto:jes063@ucsd.edu">Email</a></li>
+        <li><a href="tel:+16616258403">(661) 625-8403</a></li>
+      </ul>
+      <p><small>&copy; 2026 Jeremy Shih. All Rights Reserved.</small></p>
+    </footer>
+  </body>
+</html>

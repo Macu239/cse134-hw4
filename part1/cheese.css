@@ -1,0 +1,54 @@
+/* Jeremy Shih, https://github.com/Macu239/cse134-hw3*/
+
+body {
+  font-family: "times new roman";
+  color: black;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto 0 auto;
+  padding: 8px;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+.latin {
+  font-style: italic;
+}
+
+#warning {
+  background-color: red;
+}
+
+blockquote {
+  border: 1px solid black;
+  padding: 0.5rem;
+  margin: 20px;
+}
+
+blockquote {
+  background-color: red;
+}
+
+/* We used the same selector on blackquote, making them share the same specificity and come from the same origin, 
+When this ties, the cascade picks the one that was declared last in the CSS file, 
+making the light gray value win over red one above. */
+
+blockquote {
+  background-color: lightgray;
+}
+
+a:hover {
+  color: red;
+}
+
+a:focus,
+input:focus,
+button:focus {
+  outline: 3px solid blue;
+}
