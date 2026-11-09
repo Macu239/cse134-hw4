@@ -144,6 +144,12 @@ body > footer ul {
   list-style: none;
 }
 
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
 /* Narrow screens: stack the header so the nav gets the full width */
 @media (max-width: 40rem) {
   body > header {
