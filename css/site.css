@@ -9,6 +9,30 @@
   --link: #fda4af;
   --font: "Sora", system-ui, sans-serif;
   --max-width: 68rem;
+
+  --border: #52525b;
+  --muted: #d4d4d8;
+  --error: #f87171;
+  --success: #4ade80;
+  --warning: #fcd34d;
+  --on-accent: #ffffff;
+  color-scheme: dark;
+}
+
+/* Light theme: same token names, darker ink on a white page */
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --surface: #f4f4f5;
+  --text: #18181b;
+  --accent: #be123c;
+  --link: #9f1239;
+  --border: #71717a;
+  --muted: #52525b;
+  --error: #b91c1c;
+  --success: #15803d;
+  --warning: #a16207;
+  --on-accent: #ffffff;
+  color-scheme: light;
 }
 
 body {
@@ -116,13 +140,19 @@ button {
   border: none;
   border-radius: 6px;
   background-color: var(--accent);
-  color: var(--text);
+  color: var(--on-accent);
   font-family: var(--font);
   cursor: pointer;
 }
 
 button:hover {
   background-color: var(--surface);
+  color: var(--text);
+}
+
+/* Theme toggle sits at the end of the header row */
+#theme-toggle {
+  margin-left: auto;
 }
 
 /* Attribute selectors: text inputs and the message box fill their column */
@@ -153,7 +183,7 @@ body > footer ul {
 /* Contact form controls: fixed 2px border so validation colors never shift layout */
 .contact-form input,
 .contact-form textarea {
-  border: 2px solid #52525b;
+  border: 2px solid var(--border);
   border-radius: 6px;
   background-color: var(--bg);
   color: var(--text);
@@ -167,7 +197,7 @@ body > footer ul {
 }
 
 .contact-form .hint {
-  color: #d4d4d8;
+  color: var(--muted);
   font-size: 0.875rem;
 }
 
@@ -180,24 +210,24 @@ body > footer ul {
 /* Validation states: only after the user has interacted with the field */
 .contact-form input:user-invalid,
 .contact-form textarea:user-invalid {
-  border-color: #f87171;
+  border-color: var(--error);
 }
 
 .contact-form input:user-invalid ~ .status::after,
 .contact-form textarea:user-invalid ~ .status::after {
   content: "Needs attention: see the browser message.";
-  color: #fca5a5;
+  color: var(--error);
 }
 
 .contact-form input:user-valid,
 .contact-form textarea:user-valid {
-  border-color: #4ade80;
+  border-color: var(--success);
 }
 
 .contact-form input:user-valid ~ .status::after,
 .contact-form textarea:user-valid ~ .status::after {
   content: "Looks good.";
-  color: #86efac;
+  color: var(--success);
 }
 
 /* JavaScript-enhanced form: error list and character-count message areas */
@@ -209,24 +239,28 @@ body > footer ul {
 .form-error-area ul {
   margin: 0 0 0.5rem;
   padding-left: 1.25rem;
-  color: #fca5a5;
+  color: var(--error);
 }
 
 .form-info-area {
   margin: 0;
   font-size: 0.875rem;
-  color: #d4d4d8;
+  color: var(--muted);
 }
 
 .form-info-area.warn {
-  color: #fcd34d;
+  color: var(--warning);
   font-weight: 600;
 }
 
 .form-info-area.limit {
-  color: #fca5a5;
+  color: var(--error);
   font-weight: 700;
   text-decoration: underline;
+}
+
+@view-transition {
+  navigation: auto;
 }
 
 /* Narrow screens: stack the header so the nav gets the full width */
@@ -237,3 +271,10 @@ body > footer ul {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none;
+  }
+}
